@@ -1,1 +1,2 @@
-Welcome to my first C project: Hello World
+#!/bin/bash
+gcc -E $CFILE > c
