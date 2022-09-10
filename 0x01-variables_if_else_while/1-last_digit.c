@@ -4,6 +4,10 @@
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
+/**
+ * main - Entry
+ * Return: Always (0) Success
+ */
 int main(void)
 {
 int n;
@@ -24,7 +28,7 @@ else if (n % 10 == 0)
 
 {
 
-printf("Last digit of %d is %d\n", n, n % 10);
+printf("Last digit of %d is %d\n and is 0", n, n % 10);
 
 }
 
