@@ -1,18 +1,20 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 
 /**
- *main - print lowercase alpha a-z but remove 'q' and 'e'
- *Return: Always 0 (Success)
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-int n = 0;
-	while
-	(n < 10);
+	int n;
+
+	for (n = 0; n < 10; n++)
 	{
-	printf("%d\n", n);
+		printf("%d", n);
 	}
-n++;
-return (0);
+	printf("\n");
+	return (0);
 }
