@@ -1,27 +1,35 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
- * _atoi - Converts a string to an integer.
- * @s: The string to be converted.
+ * main - program that generates random valid
+ * passwords for the program 101-crackme
  *
- * Return: The integer value of the converted string.
+ * Return: Always 0 (Success)
  */
-int _atoi(char *s)
+int main(void)
 {
-	int sign = 1;
-	unsigned int num = 0;
+	int pass[100];
+	int i, sum, n;
 
-	do {
-		if (*s == '-')
-			sign *= -1;
+	sum = 0;	
 
-		else if (*s >= '0' && *s <= '9')
-			num = (num * 10) + (*s - '0');
+	srand(time(NULL));
 
-		else if (num > 0)
+	for (i = 0; i < 100; i++)
+	{
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
 			break;
+		}
+	}
 
-	} while (*s++);
-
-	return (num * sign);
+	return (0);
 }
