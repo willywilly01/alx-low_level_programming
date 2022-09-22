@@ -2,21 +2,20 @@
 
 /**
  * print_number - Prints an integer.
- * @nmbr: The integer to be printed.
+ * @n: The integer to be printed.
  */
-
-void print_number(int nmbr)
+void print_number(int n)
 {
-	unsigned int x = nmbr;
+	unsigned int num = n;
 
-	if (nmbr < 0)
+	if (n < 0)
 	{
 		_putchar('-');
-		x = -x;
+		num = -num;
 	}
 
-	if ((x / 10) > 0)
-		print_number(x / 10);
+	if ((num / 10) > 0)
+		print_number(num / 10);
 
-	_putchar((x % 10) + '0');
+	_putchar((num % 10) + '0');
 }
