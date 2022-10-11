@@ -1,18 +1,18 @@
-#include "main.h"
 #include <stdio.h>
+#include "dog.h"
 
 /**
- * main - check the code 
+ * main - check the code
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    int n;
+    struct dog my_dog;
 
-    n = 402;
-    printf("n=%d\n", n);
-    reset_to_98(&n);
-    printf("n=%d\n", n);
+    my_dog.name = "Poppy";
+    my_dog.age = 3.5;
+    my_dog.owner = "Bob";
+    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog.name, my_dog.age);
     return (0);
 }
